@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/maddog_logo"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rectangle_border_5"
+            android:contentDescription="Image for MAD DOG"
+            android:maxWidth="300dp"
+            android:maxHeight="250dp"
+            android:src="@drawable/maddog_logo_2"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/maddogHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maddog_logo"
+            android:layout_marginTop="30dp"
+            android:text="MAD DOG SECURITY SYSTEMS"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maddogHeaderText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_border_5"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_border_5"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/iroBuangText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powered by Iro Buang Technology ™"
+            android:layout_below="@id/registerButton"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginBottom="250dp"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
