@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".Register"
+    android:background="@color/maddogBackgroundColorDark">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
             />
 
         <TextView
@@ -32,9 +34,323 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            />
+
+        <TextView
+            android:id="@+id/basicInformationTextView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/registrationFormTextView2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:text="Personal Basic Information"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            />
+
+        <TextView
+            android:id="@+id/firstNameText"
+            android:layout_below="@id/basicInformationTextView"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="First Name : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+
+            />
+
+        <EditText
+            android:id="@+id/firstNameField"
+            android:layout_below="@id/firstNameText"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:hint="First Name"
+            android:textColorHint="@color/maddogBackgroundColorLight2"
+            android:autofillHints="name"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+
             />
 
 
+        <TextView
+            android:id="@+id/lastNameText"
+            android:layout_below="@id/basicInformationTextView"
+            android:layout_toEndOf="@id/firstNameText"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:text="Last Name : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            />
+
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_below="@id/lastNameText"
+            android:layout_toEndOf="@id/firstNameField"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Last Name"
+            android:textColorHint="@color/maddogBackgroundColorLight2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            />
+
+        <!-- Gender Radio Group -->
+        <TextView
+            android:id="@+id/genderText"
+            android:layout_below="@id/lastNameField"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Gender : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_below="@id/genderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="15dp">
+
+            <RadioButton
+                android:id="@+id/genderMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="  Male"
+                android:textColor="@color/maddogBackgroundColorLight2"
+                tools:ignore="HardcodedText"
+                android:button="@drawable/radio_button_custom"
+                />
+
+            <RadioButton
+                android:id="@+id/genderFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="  Female"
+                android:textColor="@color/maddogBackgroundColorLight2"
+                tools:ignore="HardcodedText"
+                android:button="@drawable/radio_button_custom"
+                />
+
+            <RadioButton
+                android:id="@+id/genderOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="  Other / Prefer Not To Say"
+                android:textColor="@color/maddogBackgroundColorLight2"
+                tools:ignore="HardcodedText"
+                android:button="@drawable/radio_button_custom"
+                />
+        </RadioGroup>
+
+
+        <!-- Date of Birth and Age Fields -->
+        <!-- Date of Birth Field -->
+        <TextView
+            android:id="@+id/birthDateText"
+            android:layout_below="@id/genderRadioGroup"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Date of Birth : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2" />
+
+        <ImageView
+            android:id="@+id/datepickerIcon"
+            android:layout_below="@id/birthDateText"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/datepicker_icon_asset"
+            android:layout_marginEnd="8dp" /> <!-- Margin between icon and EditText -->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/birthdateField"
+            android:layout_below="@id/birthDateText"
+            android:layout_toRightOf="@id/datepickerIcon"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="MM/DD/YYYY"
+            android:textColorHint="@color/maddogBackgroundColorLight2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true" />
+
+
+        <EditText
+            android:id="@+id/ageShowText"
+            android:layout_below="@id/birthDateText"
+            android:layout_toEndOf="@id/birthdateField"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Age"
+            android:textColorHint="@color/maddogBackgroundColorLight2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:editable="false"/>
+
+        <TextView
+            android:id="@+id/contactInformationView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/ageShowText"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Contact Information"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            />
+
+        <!-- Email and Contact Number -->
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_below="@id/contactInformationView"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Email Address : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2" />
+
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_below="@id/emailText"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Email Address"
+            android:textColorHint="@color/maddogBackgroundColorLight2"
+            android:autofillHints="emailAddress"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"/>
+
+        <TextView
+            android:id="@+id/contactNumberText"
+            android:layout_below="@id/emailField"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Mobile Phone Number : "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePicker"
+            android:layout_below="@id/contactNumberText"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_showFlag="true"
+            app:ccp_showNameCode="true"
+            app:ccp_textSize="12dp"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"/>
+
+        <EditText
+            android:id="@+id/contactNumberField"
+            android:layout_below="@id/contactNumberText"
+            android:layout_width="210dp"
+            android:layout_toEndOf="@id/countryCodePicker"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Phone Number"
+            android:textColorHint="@color/maddogBackgroundColorLight2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/maddogBackgroundColorLight2"
+            android:background="@drawable/edittext_border"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/toPasswordCreation"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactNumberField"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_background"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
 
     </RelativeLayout>
 

@@ -11,9 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class LandingPage extends AppCompatActivity {
 
-    Button loginButtonController, registerButtonController;
+    Button loginButtonController, registerButtonController, debugJumpButtonController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         loginButtonController=findViewById(R.id.loginButton);
         registerButtonController=findViewById(R.id.registerButton);
+        debugJumpButtonController=findViewById(R.id.debugJumpButton);
 
 
 //        loginButtonController.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,15 @@ public class MainActivity extends AppCompatActivity {
         registerButtonController.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(LandingPage.this, Register.class);
+                startActivity(intent);
+            }
+        });
+
+        debugJumpButtonController.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LandingPage.this, Register.class);
                 startActivity(intent);
             }
         });

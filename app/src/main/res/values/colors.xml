@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="maddogBackgroundColorDark">#08141c</color>
+    <color name="maddogBackgroundColorLight">#446782</color>
+    <color name="maddogBackgroundColorLight2">#b7ced4</color>
+
 </resources>
+

@@ -37,4 +37,10 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
+    // Country Code Picker
+    implementation libs.ccp
+
+    // libphonenumber
+    implementation libs.libphonenumber
 }

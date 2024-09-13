@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LandingPage"
+    android:background="#08141c">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,32 +16,33 @@
 
         <ImageView
             android:id="@+id/maddog_logo"
-            android:layout_width="351dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:background="@drawable/rectangle_border_5"
             android:contentDescription="Image for MAD DOG"
-            android:maxWidth="300dp"
-            android:maxHeight="250dp"
-            android:src="@drawable/maddog_logo_2"
-            tools:ignore="HardcodedText" />
+            android:maxWidth="450dp"
+            android:maxHeight="450dp"
+            android:src="@drawable/maddog_logo"
+            tools:ignore="HardcodedText"
+            android:backgroundTint="#08141c"/>
 
-        <TextView
-            android:id="@+id/maddogHeaderText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/maddog_logo"
-            android:layout_marginTop="30dp"
-            android:text="MAD DOG SECURITY SYSTEMS"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            tools:ignore="HardcodedText" />
+<!--        <TextView-->
+<!--            android:id="@+id/maddogHeaderText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/maddog_logo"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:text="MAD DOG SECURITY SYSTEMS"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Headline"-->
+<!--            tools:ignore="HardcodedText" />-->
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="225dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/maddogHeaderText"
+            android:layout_below="@id/maddog_logo"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:background="@drawable/rectangle_border_5"
@@ -62,6 +64,19 @@
             android:textColor="#ffffff"
             tools:ignore="HardcodedText" />
 
+        <Button
+            android:id="@+id/debugJumpButton"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_border_5"
+            android:text="Debug Jumper"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
+
         <TextView
             android:id="@+id/iroBuangText"
             android:layout_width="match_parent"
@@ -70,7 +85,8 @@
             android:layout_below="@id/registerButton"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:layout_marginBottom="250dp"
+            android:layout_marginBottom="185dp"
+            android:textColor="#ffffff"
             tools:ignore="HardcodedText" />
 
 

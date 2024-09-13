@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom DatePicker Dialog Style -->
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/maddogBackgroundColorLight2</item> <!-- Background color -->
+    </style>
+
+    <!-- Custom DatePicker Style -->
+    <style name="CustomDatePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:datePickerStyle">@style/CustomDatePickerStyle</item>
+    </style>
+
+    <!-- Custom DatePicker Style for DatePicker Components -->
+    <style name="CustomDatePickerStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/maddogBackgroundColorLight2</item> <!-- Background color -->
+        <item name="android:headerBackground">@color/maddogBackgroundColorLight2</item> <!-- Header color -->
+        <item name="android:calendarTextColor">#FFFFFF</item> <!-- Text color -->
+        <item name="android:textColorPrimary">#FFFFFF</item> <!-- Text color -->
+        <item name="android:textColorSecondary">#FFFFFF</item> <!-- Secondary text color -->
+    </style>
+</resources>
